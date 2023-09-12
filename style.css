@@ -22,6 +22,9 @@ body{
     width: 100%;
     height: 100vh;
 }
+.button-send {
+    margin-top: 15px;
+}
 
 /* ==> Navegação Header */
 
