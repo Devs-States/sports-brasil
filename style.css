@@ -2,6 +2,7 @@
 @font-face {
   font-family: "Poppins";
   src: url("./assets/fonts/Poppins/Poppins-medium.ttf");
+  font-weight: 200, 300, 600, 800; /*Olhar na hora que entrar no código*/
 }
 @font-face {
   font-family: "Montserrat";
@@ -14,6 +15,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  font-family: Poppins;
 }
 
 /* Variáveis */
@@ -46,7 +48,8 @@ body {
   justify-content: space-between;
   padding: 1rem;
   box-shadow: 0 0 1rem var(--color-dark3);
-  font-family: Poppins;
+
+  font-weight: 900;
 }
 #logo {
   margin-left: 4rem;
@@ -79,71 +82,63 @@ body {
 /* ==> Main */
 
 main {
+  margin: 0 auto;
+  min-width: 380px;
+  max-width: 1200px;
+}
+.title-principal {
+  font-family: Montserrat;
+  font-weight: 900;
+  color: var(--color-blue);
+  margin: 1rem 0 1rem 1rem;
+  font-size: 1.6rem;
+}
+.container-principal {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  min-height: 100vh;
+}
+.container-principal a img {
+  border-radius: 0.3rem;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+}
+.container-principal a img:hover {
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
 }
 
-.conteudo {
-  width: 60vw;
-  height: auto;
-  font-size: 1.5rem;
-  font-weight: 100;
-  line-height: 1.5;
-  text-align: justify;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.container-vini {
+  overflow: hidden;
+  grid-column: 1;
 
-.formContato {
-  width: 80vh;
-  height: 70vh;
-  border: solid 1px black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  grid-row: 1 / 3;
 }
-
-.formContato p {
-  padding-bottom: 45%;
+.container-neymar {
+  overflow: hidden;
+  grid-column: 2;
+  grid-row: 1;
 }
-
+.container-diniz {
+  overflow: hidden;
+  grid-column: 2;
+  grid-row: 2;
+}
 /* ==> Navegação Footer */
 
-.navFooter {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: 20vh;
-  background: black;
-  display: flex;
-  justify-content: space-around;
-}
-
-.navFooter a {
-  color: white;
-  font-size: 1rem;
-}
-
-.navListSportsBrasil,
-.navListFAQ,
-.navListContato {
-  position: relative;
-  font-family: sans-serif;
-  padding: 16px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 /* Media Tablet*/
 
 @media (min-width: 768px) and (max-width: 991px) {
 }
 
 /* Media Mobile*/
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .header {
     display: flex;
     height: 13vh;
@@ -223,5 +218,14 @@ main {
   #navHeader.active .navListHeader {
     height: 40vh;
     visibility: visible;
+  }
+  /* ==> Main */
+  .title-principal {
+    font-size: 1.2rem;
+  }
+  .container-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
