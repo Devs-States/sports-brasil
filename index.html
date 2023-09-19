@@ -16,7 +16,7 @@
     <!-- Navegação entre as páginas -->
     <header class="header">
       <a href="index.html" id="logo"
-        ><img class="imageLogo" src="./assets/logo.svg" alt=""
+        ><img class="imageLogo" src="./assets/svgs/logo.svg" alt=""
       /></a>
       <nav id="navHeader">
         <button
@@ -39,17 +39,21 @@
     <!-- Navegação entre as páginas -->
     <!-- Conteúdo principal -->
     <main>
-      <section>
+      <section id="section-noticia">
+        <!-- Conteudo Destaque-->
         <h1 class="title-principal">Destaques da Semana</h1>
-        <div class="container-principal">
+        <article class="container-principal">
           <div class="container-vini col">
             <a href="#"
               ><picture>
                 <source
                   media="(max-width: 600px)"
-                  srcset="./assets/vinijr-mobile.png"
+                  srcset="./assets/images/vinijr-mobile.png"
                 />
-                <img src="./assets/vinijr2.jpg" alt="Imagem vinijr" /> </picture
+                <img
+                  src="./assets/images/vinijr2.jpg"
+                  alt="Imagem vinijr"
+                /> </picture
             ></a>
           </div>
           <div class="container-neymar col">
@@ -57,11 +61,11 @@
               <picture>
                 <source
                   media="(max-width: 600px)"
-                  srcset="./assets/neymar-mobile.png"
+                  srcset="./assets/images/neymar-mobile.png"
                 />
                 <img
                   class="image-neymar"
-                  src="./assets/neymar.png"
+                  src="./assets/images/neymar.png"
                   alt="Imagem neymar"
                 />
               </picture>
@@ -73,14 +77,234 @@
               <picture>
                 <source
                   media="(max-width: 600px)"
-                  srcset="./assets/fernandodiniz-mobile.jpg" />
+                  srcset="./assets/images/fernandodiniz-mobile.jpg" />
                 <img
-                  src="./assets/fernandodiniz.jpg"
+                  src="./assets/images/fernandodiniz.jpg"
                   alt="Imagem fernandodiniz"
               /></picture>
             </a>
           </div>
-        </div>
+        </article>
+      </section>
+      <!-- Conteudo Destaque -->
+      <!-- Conteudo Jogos -->
+      <section id="sectionJogos">
+        <h2 class="title-jogos">Jogos Do Mês</h2>
+        <article id="tabelaJogos">
+          <table>
+            <caption>
+              Copa do Mundo 2022
+            </caption>
+            <thead>
+              <tr>
+                <th>Países</th>
+                <th>Países</th>
+                <th>Dias</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="container-bandeira-pais">
+                    <img
+                      src="./assets/svgs/brasil.svg"
+                      alt="Icon bandeira do Brasil"
+                    />
+                    <span>Brasil</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="container-bandeira-pais">
+                    <img
+                      src="./assets/svgs/argentina.svg"
+                      alt="Icon bandeira do Argentina"
+                    />
+                    <span>Argentina</span>
+                  </div>
+                </td>
+                <td>06/02 - 17h40</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="container-bandeira-pais">
+                    <img
+                      src="./assets/svgs/brasil.svg"
+                      alt="Icon bandeira do Brasil"
+                    />
+                    <span>Brasil</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="container-bandeira-pais">
+                    <img
+                      src="./assets/svgs/japan.svg"
+                      alt="Icon bandeira do Japão"
+                    />
+                    <span>Japão</span>
+                  </div>
+                </td>
+                <td>08/02 - 16h20</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="container-bandeira-pais">
+                    <img
+                      src="./assets/svgs/brasil.svg"
+                      alt="Icon bandeira do Brasil"
+                    />
+                    <span>Brasil</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="container-bandeira-pais">
+                    <img
+                      src="./assets/svgs/franca.svg"
+                      alt="Icon bandeira do França"
+                    />
+                    <span>França</span>
+                  </div>
+                </td>
+                <td>12/02 - 15h20</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="container-bandeira-pais">
+                    <img
+                      src="./assets/svgs/brasil.svg"
+                      alt="Icon bandeira do Brasil"
+                    />
+                    <span>Brasil</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="container-bandeira-pais">
+                    <img
+                      src="./assets/svgs/alemanha.svg"
+                      alt="Icon bandeira do Alemanha"
+                    />
+                    <span>Alemanha</span>
+                  </div>
+                </td>
+                <td>18/02 - 13h30</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="container-bandeira-pais">
+                    <img
+                      src="./assets/svgs/brasil.svg"
+                      alt="Icon bandeira do Brasil"
+                    />
+                    <span>Brasil</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="container-bandeira-pais">
+                    <img
+                      src="./assets/svgs/korea.svg"
+                      alt="Icon bandeira do Korea"
+                    />
+                    <span>Korea</span>
+                  </div>
+                </td>
+                <td>20/02 - 14h00</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="container-bandeira-pais">
+                    <img
+                      src="./assets/svgs/brasil.svg"
+                      alt="Icon bandeira do Brasil"
+                    />
+                    <span>Brasil</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="container-bandeira-pais">
+                    <img
+                      src="./assets/svgs/mexico.svg"
+                      alt="Icon bandeira do México"
+                    />
+                    <span>México</span>
+                  </div>
+                </td>
+                <td>23/02 - 12h00</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="container-bandeira-pais">
+                    <img
+                      src="./assets/svgs/brasil.svg"
+                      alt="Icon bandeira do Brasil"
+                    />
+                    <span>Brasil</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="container-bandeira-pais">
+                    <img
+                      src="./assets/svgs/croacia.svg"
+                      alt="Icon bandeira do Croácia"
+                    />
+                    <span>Croácia</span>
+                  </div>
+                </td>
+                <td>25/02 - 16h20</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="container-bandeira-pais">
+                    <img
+                      src="./assets/svgs/brasil.svg"
+                      alt="Icon bandeira do Brasil"
+                    />
+                    <span>Brasil</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="container-bandeira-pais">
+                    <img
+                      src="./assets/svgs/eua.svg"
+                      alt="Icon bandeira do EUA"
+                    />
+                    <span>EUA</span>
+                  </div>
+                </td>
+                <td>27/02 - 15h10</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="container-bandeira-pais">
+                    <img
+                      src="./assets/svgs/brasil.svg"
+                      alt="Icon bandeira do Brasil"
+                    />
+                    <span>Brasil</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="container-bandeira-pais">
+                    <img
+                      src="./assets/svgs/peru.svg"
+                      alt="Icon bandeira do Peru"
+                    />
+                    <span>Peru</span>
+                  </div>
+                </td>
+                <td>25/02 - 12h00</td>
+              </tr>
+            </tbody>
+          </table>
+          <span
+            class="overflowTabela"
+            data-state="visible"
+            aria-hidden="true"
+          ></span>
+        </article>
+        <button class="buttonTabelaJogos" data-state="more">Ver Mais!</button>
+      </section>
+      <section class="teste">
+        <h1>Teste</h1>
       </section>
     </main>
     <!-- Conteúdo principal -->

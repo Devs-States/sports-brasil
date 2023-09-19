@@ -26,10 +26,15 @@
   --color-dark3: #1414146b;
   --color-white: #ffffff;
   --color-green: #26e037;
+  --color-green2: rgba(38, 224, 54, 0.678);
   --color-yellow: #fffc22;
   --color-blue: #2636e0;
   --color-blue2: #36f1f7;
   --color-blue3: #36f1f77c;
+  --border-table: #ddd;
+  --background-thead: #d4d4d4;
+  --bg-hoverThead: rgb(221, 220, 220);
+  --background-table: #e7e7e7;
 }
 
 body {
@@ -73,18 +78,19 @@ body {
   font-size: 1rem;
   display: block;
   padding: 0.5rem;
-  transition: 0.4s all;
 }
 .navListHeader a:hover {
   color: var(--color-blue);
-  transform: scale(1.04);
 }
 /* ==> Main */
 
 main {
   margin: 0 auto;
-  min-width: 380px;
+  min-width: 298px;
   max-width: 1200px;
+}
+#section-noticia {
+  width: 100%;
 }
 .title-principal {
   font-family: Montserrat;
@@ -112,6 +118,8 @@ main {
 .container-principal a img:hover {
   -webkit-transform: scale(1.03);
   transform: scale(1.03);
+  transition: all 0.9s;
+  filter: brightness(80%);
 }
 
 .container-vini {
@@ -129,6 +137,85 @@ main {
   overflow: hidden;
   grid-column: 2;
   grid-row: 2;
+}
+#sectionJogos {
+  width: 100%;
+  position: relative;
+  margin-bottom: 3.1rem;
+}
+.title-jogos {
+  font-family: Montserrat;
+  font-weight: 900;
+  color: var(--color-blue);
+  margin: 1rem 0 1rem 1rem;
+  font-size: 1.6rem;
+}
+#tabelaJogos {
+  max-height: 40vh;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.4s ease;
+}
+.overflowTabela {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+}
+.overflowTabela[data-state="visible"] {
+  display: block;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 3rem;
+  background: var(--background-table);
+}
+
+caption {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-family: Montserrat;
+  font-weight: 800;
+}
+
+th,
+td {
+  border: 1px solid var(--border-table);
+  padding: 8px;
+  text-align: left;
+}
+.container-bandeira-pais {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+th {
+  background-color: var(--background-thead);
+}
+
+tr:hover {
+  background-color: var(--bg-hoverThead);
+}
+.buttonTabelaJogos {
+  position: absolute;
+
+  width: 100%;
+  bottom: 0.1rem;
+  height: 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: var(--color-green2);
+  border: none;
+  border-radius: 0.2rem;
+  color: var(--color-dark2);
+  cursor: pointer;
+}
+.teste {
+  height: 100vh;
+  width: 100%;
 }
 /* ==> Navegação Footer */
 
@@ -222,10 +309,41 @@ main {
   /* ==> Main */
   .title-principal {
     font-size: 1.2rem;
+    text-align: center;
   }
   .container-principal {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
+  }
+  #sectionJogos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .title-jogos {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  #tabelaJogos {
+    width: 96%;
+  }
+  table {
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  caption {
+    font-size: 1rem;
+  }
+  th,
+  td {
+    font-size: 0.8rem;
+  }
+  .buttonTabelaJogos {
+    width: 96%;
   }
 }
