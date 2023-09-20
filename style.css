@@ -92,7 +92,9 @@ main {
 #section-noticia {
   width: 100%;
 }
-.title-principal {
+.title-principal,
+.title-jogos,
+.titleVideos {
   font-family: Montserrat;
   font-weight: 900;
   color: var(--color-blue);
@@ -143,13 +145,7 @@ main {
   position: relative;
   margin-bottom: 3.1rem;
 }
-.title-jogos {
-  font-family: Montserrat;
-  font-weight: 900;
-  color: var(--color-blue);
-  margin: 1rem 0 1rem 1rem;
-  font-size: 1.6rem;
-}
+
 #tabelaJogos {
   max-height: 40vh;
   overflow: hidden;
@@ -213,9 +209,18 @@ tr:hover {
   color: var(--color-dark2);
   cursor: pointer;
 }
-.teste {
+#sectionVideos {
   height: 100vh;
   width: 100%;
+}
+#container-videos {
+  width: 100%;
+
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 /* ==> Navegação Footer */
 
