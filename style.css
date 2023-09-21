@@ -1,8 +1,9 @@
 /* links externos */
+
 @font-face {
   font-family: "Poppins";
   src: url("./assets/fonts/Poppins/Poppins-medium.ttf");
-  font-weight: 200, 300, 600, 800; /*Olhar na hora que entrar no código*/
+  font-weight: 200, 300, 600, 800;
 }
 @font-face {
   font-family: "Montserrat";
