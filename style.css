@@ -1,122 +1,355 @@
 /* links externos */
 
-
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-medium.ttf");
+  font-weight: 200, 300, 600, 800;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
 /* Padrão para todos os elementos */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: Poppins;
 }
 
 /* Variáveis */
 
-:root{
-
+:root {
+  --color-dark: #000000;
+  --color-dark2: #141414;
+  --color-dark3: #1414146b;
+  --color-white: #ffffff;
+  --color-green: #26e037;
+  --color-green2: rgba(38, 224, 54, 0.678);
+  --color-yellow: #fffc22;
+  --color-blue: #2636e0;
+  --color-blue2: #36f1f7;
+  --color-blue3: #36f1f77c;
+  --border-table: #ddd;
+  --background-thead: #d4d4d4;
+  --bg-hoverThead: rgb(221, 220, 220);
+  --background-table: #e7e7e7;
 }
 
-/* Classes, ID's e Elementos */
-
-body{
-    width: 100%;
-    height: 100vh;
-}
-.button-send {
-    margin-top: 15px;
+body {
+  width: 100%;
+  min-height: 100vh;
 }
 
+/* Media DeskTop */
 /* ==> Navegação Header */
+.header {
+  background: var(--color-white);
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  box-shadow: 0 0 1rem var(--color-dark3);
 
-.navHeader{
-    width: 100%;
-    height: 10vh;
-    border: solid 1px black;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  font-weight: 900;
+}
+#logo {
+  margin-left: 4rem;
+}
+.imageLogo {
+  width: 3.8rem;
+}
+#buttonMenu {
+  display: none;
+}
+#navHeader {
+  width: 65%;
+}
+.navListHeader {
+  display: flex;
+  gap: 6rem;
 }
 
-#logo{
-    padding-left: 64px;
-    color: black;
-    font-size: 2rem;
-    font-weight: 600;
+.navListHeader a {
+  color: var(--color-dark2);
+  font-size: 1rem;
+  display: block;
+  padding: 0.5rem;
 }
-
-.navListHeader{
-    display: flex;
-    align-items: center;
+.navListHeader a:hover {
+  color: var(--color-blue);
 }
-
-.navListHeader li{
-    padding: 8px 64px;
-}
-
-.navListHeader a{
-    color: black;
-    font-size: 1.2rem;
-    font-weight: 100;
-}
-
 /* ==> Main */
 
-main{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+main {
+  margin: 0 auto;
+  min-width: 298px;
+  max-width: 1200px;
+}
+#section-noticia {
+  width: 100%;
+}
+.title-principal,
+.title-jogos,
+.titleVideos {
+  font-family: Montserrat;
+  font-weight: 900;
+  color: var(--color-blue);
+  margin: 1rem 0 1rem 1rem;
+  font-size: 1.6rem;
+}
+.container-principal {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  min-height: 100vh;
+}
+.container-principal a img {
+  border-radius: 0.3rem;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+}
+.container-principal a img:hover {
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+  transition: all 0.9s;
+  filter: brightness(80%);
 }
 
-.conteudo{
-    width: 60vw;
-    height: auto;
-    font-size: 1.5rem;
-    font-weight: 100;
-    line-height: 1.5;
-    text-align: justify;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container-vini {
+  overflow: hidden;
+  grid-column: 1;
+
+  grid-row: 1 / 3;
+}
+.container-neymar {
+  overflow: hidden;
+  grid-column: 2;
+  grid-row: 1;
+}
+.container-diniz {
+  overflow: hidden;
+  grid-column: 2;
+  grid-row: 2;
+}
+#sectionJogos {
+  width: 100%;
+  position: relative;
+  margin-bottom: 3.1rem;
 }
 
-.formContato{
-    width: 80vh;
-    height: 70vh;
-    border: solid 1px black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#tabelaJogos {
+  max-height: 40vh;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.4s ease;
+}
+.overflowTabela {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+}
+.overflowTabela[data-state="visible"] {
+  display: block;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 3rem;
+  background: var(--background-table);
 }
 
-.formContato p{
-    padding-bottom: 45%;
+caption {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-family: Montserrat;
+  font-weight: 800;
 }
 
+th,
+td {
+  border: 1px solid var(--border-table);
+  padding: 8px;
+  text-align: left;
+}
+.container-bandeira-pais {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+th {
+  background-color: var(--background-thead);
+}
+
+tr:hover {
+  background-color: var(--bg-hoverThead);
+}
+.buttonTabelaJogos {
+  position: absolute;
+
+  width: 100%;
+  bottom: 0.1rem;
+  height: 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: var(--color-green2);
+  border: none;
+  border-radius: 0.2rem;
+  color: var(--color-dark2);
+  cursor: pointer;
+}
+#sectionVideos {
+  height: 100vh;
+  width: 100%;
+}
+#container-videos {
+  width: 100%;
+
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
 /* ==> Navegação Footer */
 
-.navFooter{
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 20vh;
-    background: black;
+/* Media Tablet*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Media Mobile*/
+@media (max-width: 600px) {
+  .header {
     display: flex;
-    justify-content: space-around;
-}
-
-.navFooter a{
-    color: white;
-    font-size: 1rem;
-}
-
-.navListSportsBrasil, .navListFAQ, .navListContato{
+    height: 13vh;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    font-family: sans-serif;
-    padding: 16px 0;
+  }
+  #logo {
+    margin-left: 0.1rem;
+  }
+  #navHeader {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+  }
+  #buttonMenu {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  #menuHamburguer {
+    width: 20px;
+    border-top: 2px solid;
+    display: block;
+    color: var(--color-dark2);
+  }
+  #menuHamburguer::after,
+  #menuHamburguer::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #navHeader.active #menuHamburguer {
+    border-top-color: transparent;
+  }
+  #navHeader.active #menuHamburguer::before {
+    transform: rotate(135deg);
+  }
+  #navHeader.active #menuHamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+
+  .navListHeader a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    font-size: 0.8rem;
+    font-weight: 100;
+    border-bottom: 2px solid var(--color-blue3);
+  }
+  .navListHeader a:hover {
+    background: var(--color-blue3);
+    color: var(--color-dark2);
+  }
+  .navListHeader {
+    background: var(--color-white);
+    width: 100%;
+    top: 4.4rem;
+    right: 0px;
+    height: 0px;
+    position: absolute;
+    z-index: 9999;
+    transition: 0.6s;
+    display: block;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  #navHeader.active .navListHeader {
+    height: 40vh;
+    visibility: visible;
+  }
+  /* ==> Main */
+  .title-principal {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .container-principal {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #sectionJogos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .title-jogos {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  #tabelaJogos {
+    width: 96%;
+  }
+  table {
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  caption {
+    font-size: 1rem;
+  }
+  th,
+  td {
+    font-size: 0.8rem;
+  }
+  .buttonTabelaJogos {
+    width: 96%;
+  }
 }
-
-/* Media Querys */
