@@ -1,17 +1,29 @@
 /* links externos */
 
-
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-medium.ttf");
+  font-weight: 200, 300, 600, 800;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
 /* Padrão para todos os elementos */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: Poppins;
 }
 
 /* Variáveis */
 
+:root{
+
+}
 
 /* Classes, ID's e Elementos */
 
@@ -20,12 +32,13 @@ body{
     height: 100vh;
 }
 
+/* Media DeskTop */
 /* ==> Navegação Header */
 
 .navHeader{
     width: 100%;
     height: 10vh;
-    border: solid 1px rgb(255, 0, 0);
+    border: solid 1px black;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,77 +53,122 @@ body{
 
 .navListHeader{
     display: flex;
-    align-items: center;
-}
-
-.navListHeader li{
-    padding: 8px 64px;
-}
-
-.navListHeader a{
-    color: black;
-    font-size: 1.2rem;
-    font-weight: 100;
-}
-
-/* ==> Main */
-
-main{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.conteudo{
-    width: 60vw;
-    height: auto;
-    font-size: 1.5rem;
-    font-weight: 100;
-    line-height: 1.5;
-    text-align: justify;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.formContato{
-    width: 80vh;
-    height: 70vh;
-    border: solid 1px black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.formContato p{
-    padding-bottom: 45%;
-}
-
-/* ==> Navegação Footer */
-
-.navFooter{
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 20vh;
-    background: black;
-    display: flex;
-    justify-content: space-around;
-}
-
-.navFooter a{
-    color: white;
-    font-size: 1rem;
-}
-
-.navListSportsBrasil, .navListFAQ, .navListContato{
-    position: relative;
-    font-family: sans-serif;
-    padding: 16px 0;
-    display: flex;
-    flex-direction: column;
+    height: 13vh;
     justify-content: space-between;
-}
+    align-items: center;
+    position: relative;
+  }
+  #logo {
+    margin-left: 0.1rem;
+  }
+  #navHeader {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+  }
+  #buttonMenu {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  #menuHamburguer {
+    width: 20px;
+    border-top: 2px solid;
+    display: block;
+    color: var(--color-dark2);
+  }
+  #menuHamburguer::after,
+  #menuHamburguer::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #navHeader.active #menuHamburguer {
+    border-top-color: transparent;
+  }
+  #navHeader.active #menuHamburguer::before {
+    transform: rotate(135deg);
+  }
+  #navHeader.active #menuHamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
 
-/* Media Querys */
+  .navListHeader a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    font-size: 0.8rem;
+    font-weight: 100;
+    border-bottom: 2px solid var(--color-blue3);
+  }
+  .navListHeader a:hover {
+    background: var(--color-blue3);
+    color: var(--color-dark2);
+  }
+  .navListHeader {
+    background: var(--color-white);
+    width: 100%;
+    top: 4.4rem;
+    right: 0px;
+    height: 0px;
+    position: absolute;
+    z-index: 9999;
+    transition: 0.6s;
+    display: block;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  #navHeader.active .navListHeader {
+    height: 40vh;
+    visibility: visible;
+  }
+  /* ==> Main */
+  .title-principal {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .container-principal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #sectionJogos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .title-jogos {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  #tabelaJogos {
+    width: 96%;
+  }
+  table {
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  caption {
+    font-size: 1rem;
+  }
+  th,
+  td {
+    font-size: 0.8rem;
+  }
+  .buttonTabelaJogos {
+    width: 96%;
+  }
+}
