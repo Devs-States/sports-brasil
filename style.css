@@ -12,9 +12,6 @@
 
 /* Variáveis */
 
-:root{
-
-}
 
 /* Classes, ID's e Elementos */
 
@@ -31,7 +28,7 @@ body{
 .navHeader{
     width: 100%;
     height: 10vh;
-    border: solid 1px black;
+    border: solid 1px rgb(255, 0, 0);
     display: flex;
     align-items: center;
     justify-content: space-between;
