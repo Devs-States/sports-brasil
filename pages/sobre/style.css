@@ -110,39 +110,6 @@ main{
     background: var(--light-grey);
 }
 
-.cards{
-    position: absolute;
-    width: 800px;
-    height: 584px;
-    background: var(--dark-yellow);
-}
-
-.container{
-    position: absolute;
-    width: 100%;
-    height: 584px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.cardsLeft, .cardsRight{
-    width: 275px;
-    height: 584px;
-    background: rgb(255, 255, 255);
-    z-index: 1000;
-}
-
-.conteudo{
-    z-index: 0;
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    width: 3200px;
-    height: 584px;
-}
 
 .card{
     position: relative;
