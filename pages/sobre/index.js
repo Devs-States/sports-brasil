@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const buttonMenuMobile = document.getElementById("buttonMenu")
 
 function toggleMenu(event) {
