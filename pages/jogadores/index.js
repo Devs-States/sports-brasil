@@ -36,7 +36,7 @@ function carrossel() {
   cardConteiner.style.transform = `translateX(${-count * 332}px)`;
 }
 
-setInterval(carrossel, 500);
+setInterval(carrossel, 1800);
 
 
 
