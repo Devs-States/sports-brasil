@@ -9,6 +9,13 @@
   src: url("../../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
 }
 
+@font-face{
+  font-family: "Lilita One";
+  src: url("../../assets/fonts/Lilita-One/LilitaOne-Regular.ttf");
+  font-weight: 200, 300, 600, 800;
+}
+
+
 /* Padrão para todos os elementos */
 * {
   padding: 0;
@@ -27,9 +34,13 @@
   --color-dark3: #1414146b;
   --color-white: #ffffff;
   --color-green: #26e037;
-  --color-green2: rgba(38, 224, 54, 0.678);
+  --color-green2: #44ff37;
+  --color-greenDk:#011302;
   --color-yellow: #fffc22;
+  --color-yellow2: #9d9a00;
   --color-blue: #2636e0;
+  --color-blue4: #4977ff;
+  --color-blueDk: #131a70;
   --color-blue2: #36f1f7;
   --color-blue3: #36f1f77c;
   --border-table: #ddd;
@@ -93,36 +104,113 @@ body {
 
 /* conteudo principal*/
 
-.carrosselBox{
-  position: relative;
-  margin: 2% auto 0 auto;
-  overflow: hidden;
+.carrosselConteiner{
+  margin: 2.5% auto;
+  width: 100%;
   height: 520px;
-  width: 200%;
   display: flex;
-  padding: 24px 68px;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  outline: solid 1px red;
-  transition: transform .7s ease-in-out;
+  
+}
+
+.center{
+  width: 80%;
+  height: 520px;
+  border: solid 1px black;
+}
+
+.lateral{
+  width: 12%;
+  height: 520px;
+  background: rgb(255, 255, 255);
+  z-index: 3;
+  
+}
+
+.carrosselBox{
+  position: absolute;
+  overflow: hidden;
+  height: 520px;
+  display: flex;
+  padding: 24px 68px;
+  left: 11.2%;
+  gap: 72px;
+  align-items: center;
+  transition: transform .8s ease-in-out;
+  z-index: 1;
 
 }
 
-.carrossel{
-  z-index: 3;
-  
-  width: 900px;
+.carrosselBg{
+  width: 100%;
   height: 520px;
-  outline: solid 1px red;
-  position: relative;
-  
+  position: absolute;
+  z-index: -1;
+  background: url('../../assets/images/cbf-bg.jpg') center no-repeat;
+  background-size: cover;
+  filter: brightness(80%);
 }
 
 .card{
+  padding: 4px;
+  animation: sumidao .7s forwards;
+  z-index: 4;
+  flex-grow: 0;
+  flex-basis: 260px;
+  flex-shrink: 0;
   width: 260px;
   height: 380px;
-  outline: solid 2px black;
+  outline: solid 2px var(--color-dark2);
+  background: linear-gradient(to bottom, var(--color-blue3), var(--color-yellow));
+  box-shadow: 0 0 10px black;
+  display: flex;
+  flex-direction: column;
+}
+
+.JogadorImg{
+  position: relative;
+  width: 100%;
+  height: 64%;
+}
+
+.JogadorImg img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.JogadorNome{
+  position: relative;
+  width: 100%;
+  height: 36%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lilita One", cursive;
+  font-style: italic;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px var(--color-blueDk);
+  color: var(--color-dark);
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
+}
+
+.popup-content {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /*footer*/
