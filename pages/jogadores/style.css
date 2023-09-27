@@ -12,7 +12,6 @@
 @font-face{
   font-family: "Lilita One";
   src: url("../../assets/fonts/Lilita-One/LilitaOne-Regular.ttf");
-  font-weight: 200, 300, 600, 800;
 }
 
 
@@ -23,7 +22,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: Poppins;
+  
 }
 
 /* Variáveis */
@@ -53,6 +52,7 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+  font-family: Poppins;
 }
 
 /* Media DeskTop */
@@ -66,7 +66,7 @@ body {
   justify-content: space-between;
   padding: 1rem;
   box-shadow: 0 0 1rem var(--color-dark3);
-
+  font-family: Poppins;
   font-weight: 900;
 }
 
@@ -159,12 +159,11 @@ body {
   flex-shrink: 0;
   width: 260px;
   height: 380px;
-  outline: solid 2px var(--color-dark2);
   background: linear-gradient(to bottom, var(--color-blue3), var(--color-yellow));
   box-shadow: 0 0 10px black;
   display: flex;
   flex-direction: column;
-  outline: dashed 7px var(--color-white);
+  outline: solid 2px var(--color-white);
 }
 
 .JogadorImg{
@@ -186,10 +185,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Lilita One", cursive;
+  font-family: Lilita One;
+  font-weight: 900;
   font-style: italic;
   font-size: 2rem;
-  text-shadow: 2px 2px 4px var(--color-blueDk);
+  /* text-shadow: 2px 2px 4px var(--color-blueDk); */
   color: var(--color-dark);
 }
 

@@ -33,6 +33,12 @@ function carrossel() {
     count = 0;
   }
 
+  if(window.screen.width <= 600){
+    if (count > cards.length - 1) {
+      count = 0;
+    }
+  }
+
   cardConteiner.style.transform = `translateX(${-count * 332}px)`;
 }
 
