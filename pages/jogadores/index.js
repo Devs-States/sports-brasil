@@ -81,6 +81,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const cardClone = card.cloneNode(true);
       const popup = document.createElement("div");
       popup.classList.add("popup"); 
+      const jogadorNomeClone = cardClone.querySelector(".JogadorNome");
+      jogadorNomeClone.style.fontSize = "1.14rem";
       popup.appendChild(cardClone);
       document.body.appendChild(popup);
       
