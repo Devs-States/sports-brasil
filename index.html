@@ -310,42 +310,142 @@
       <section id="sectionVideos">
         <h1 class="titleVideos">Jogadas da Semana</h1>
         <article id="container-videos">
-          <video
-            src="./assets/movies/gol-1.mp4"
-            controls
-            height="300px"
-            width="500px"
-          ></video>
-          <video
-            src="./assets/movies/gol-2.mp4"
-            controls
-            height="300px"
-            width="500px"
-          ></video>
-          <video
-            src="./assets/movies/gol-3.mp4"
-            controls
-            height="300px"
-            width="500px"
-          ></video>
-          <video
-            src="./assets/movies/gol-4.mp4"
-            controls
-            height="300px"
-            width="500px"
-          ></video>
-          <video
-            src="./assets/movies/quase-gol-1.mp4"
-            controls
-            height="300px"
-            width="500px"
-          ></video>
-          <video
-            src="./assets/movies/quase-gol-2.mp4"
-            controls
-            height="300px"
-            width="500px"
-          ></video>
+          <div class="gallery-wrapper">
+            <button class="prev-button control">
+              <img src="./assets/svgs/arrow-left.svg" alt="arrow left" />
+            </button>
+            <button class="next-button control">
+              <img src="./assets/svgs/arrow-right.svg" alt="arrow right" />
+            </button>
+            <div class="gallery">
+              <div class="item current-item">
+                <img
+                  src="./assets/images/alexandro-carrossel.png"
+                  alt=""
+                  class="image-carrossel"
+                  data-video="video1"
+                />
+              </div>
+              <div class="popup" id="video1">
+                <video controls class="popup-video" id="popup-video1">
+                  <source src="./assets/movies/gol-1.mp4" type="video/mp4" />
+                  Seu browser não suporta esse tipo de vídeo.
+                </video>
+                <button
+                  class="close-button"
+                  onclick="closeVideoPopup('video1')"
+                >
+                  &times;
+                </button>
+              </div>
+              <div class="item current-item">
+                <img
+                  src="./assets/images/neymar-carrossel.png"
+                  alt=""
+                  class="image-carrossel"
+                  data-video="video2"
+                />
+              </div>
+              <div class="popup" id="video2">
+                <video controls class="popup-video" id="popup-video2">
+                  <source src="./assets/movies/gol-2.mp4" type="video/mp4" />
+                  Seu browser não suporta esse tipo de vídeo.
+                </video>
+                <button
+                  class="close-button"
+                  onclick="closeVideoPopup('video2')"
+                >
+                  &times;
+                </button>
+              </div>
+              <div class="item current-item">
+                <img
+                  src="./assets/images/everton-carrossel.png"
+                  alt=""
+                  class="image-carrossel"
+                  data-video="video3"
+                />
+              </div>
+              <div class="popup" id="video3">
+                <video controls class="popup-video" id="video3">
+                  <source src="./assets/movies/gol-3.mp4" type="video/mp4" />
+                  Seu browser não suporta esse tipo de vídeo.
+                </video>
+                <button
+                  class="close-button"
+                  onclick="closeVideoPopup('video3')"
+                >
+                  &times;
+                </button>
+              </div>
+              <div class="item current-item">
+                <img
+                  src="./assets/images/richarlison-carrossel.png"
+                  alt=""
+                  class="image-carrossel"
+                  data-video="video4"
+                />
+              </div>
+              <div class="popup" id="video4">
+                <video controls class="popup-video" id="popup-video4">
+                  <source src="./assets/movies/gol-4.mp4" type="video/mp4" />
+                  Seu browser não suporta esse tipo de vídeo.
+                </video>
+                <button
+                  class="close-button"
+                  onclick="closeVideoPopup('video4')"
+                >
+                  &times;
+                </button>
+              </div>
+              <div class="item current-item">
+                <img
+                  src="./assets/images/alexandro-quase-gol.png"
+                  alt=""
+                  class="image-carrossel"
+                  data-video="video5"
+                />
+              </div>
+              <div class="popup" id="video5">
+                <video controls class="popup-video" id="popup-video5">
+                  <source
+                    src="./assets/movies/quase-gol-1.mp4"
+                    type="video/mp4"
+                  />
+                  Seu browser não suporta esse tipo de vídeo.
+                </video>
+                <button
+                  class="close-button"
+                  onclick="closeVideoPopup('video5')"
+                >
+                  &times;
+                </button>
+              </div>
+              <div class="item current-item">
+                <img
+                  src="./assets/images/alex-carrossel.png"
+                  alt=""
+                  class="image-carrossel"
+                  data-video="video6"
+                />
+              </div>
+              <div class="popup" id="video6">
+                <video controls class="popup-video" id="popup-video6">
+                  <source
+                    src="./assets/movies/quase-gol-2.mp4"
+                    type="video/mp4"
+                  />
+                  Seu browser não suporta esse tipo de vídeo.
+                </video>
+                <button
+                  class="close-button"
+                  onclick="closeVideoPopup('video6')"
+                >
+                  &times;
+                </button>
+              </div>
+            </div>
+          </div>
         </article>
       </section>
     </main>
