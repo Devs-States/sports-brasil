@@ -165,17 +165,21 @@ body {
   width: 260px;
   height: 380px;
   background:  var(--color-yellow);
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 20px black;
   box-shadow: inset 4px -4px 16px black;
   display: flex;
   flex-direction: column;
   border: solid 10px transparent;
   border-image: url('../../assets/images/black-bg.jpg') 50 round;
-
+  transition: .8s ease-in-out;
+  filter: brightness(60%) blur(1px);
+  cursor: pointer;
 }
 
-.card:hover{
-  outline: dashed 2px var(--color-yellow);
+.cardGrow{
+  transform: scale(1.1);
+  filter: brightness(100%) blur(0);
+  /* transition: .3s ease; */
 }
 
 
@@ -221,6 +225,7 @@ body {
 
 
 .popup {
+  padding-top: 68px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -231,6 +236,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 6;
+ 
 }
 
 .popup-content {
@@ -240,6 +246,7 @@ body {
 }
 
 .popup-opened {
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -251,6 +258,8 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 6;
+  filter: brightness(100%) blur(0);
+  
 }
 
 .popup-opened .popup-content {
