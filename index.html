@@ -42,8 +42,8 @@
     <!-- Navegação entre as páginas -->
     <!-- Conteúdo principal -->
     <main>
-      <section id="section-noticia">
-        <!-- Conteudo Destaque-->
+      <!-- Conteudo Destaque-->
+      <section id="sectionNoticia">
         <h1 class="title-principal">Destaques da Semana</h1>
         <article class="container-principal">
           <div class="container-vini col">
@@ -51,6 +51,10 @@
               ><picture>
                 <source
                   media="(max-width: 600px)"
+                  srcset="./assets/images/vinijr-mobile.png"
+                />
+                <source
+                  media="(max-width: 768px)"
                   srcset="./assets/images/vinijr-mobile.png"
                 />
                 <img
@@ -64,6 +68,10 @@
               <picture>
                 <source
                   media="(max-width: 600px)"
+                  srcset="./assets/images/neymar-mobile.png"
+                />
+                <source
+                  media="(max-width: 768px)"
                   srcset="./assets/images/neymar-mobile.png"
                 />
                 <img
@@ -80,7 +88,10 @@
               <picture>
                 <source
                   media="(max-width: 600px)"
-                  srcset="./assets/images/fernandodiniz-mobile.jpg" />
+                  srcset="./assets/images/fernandodiniz-mobile.png" />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./assets/images/fernandodiniz-mobile.png" />
                 <img
                   src="./assets/images/fernandodiniz.jpg"
                   alt="Imagem fernandodiniz"
@@ -311,17 +322,11 @@
         <h1 class="titleVideos">Jogadas da Semana</h1>
         <article id="container-videos">
           <div class="gallery-wrapper">
-            <button class="prev-button control">
-              <img src="./assets/svgs/arrow-left.svg" alt="arrow left" />
-            </button>
-            <button class="next-button control">
-              <img src="./assets/svgs/arrow-right.svg" alt="arrow right" />
-            </button>
             <div class="gallery">
               <div class="item current-item">
                 <img
                   src="./assets/images/alexandro-carrossel.png"
-                  alt=""
+                  alt="alexandro carrossel"
                   class="image-carrossel"
                   data-video="video1"
                 />
@@ -341,7 +346,7 @@
               <div class="item current-item">
                 <img
                   src="./assets/images/neymar-carrossel.png"
-                  alt=""
+                  alt="neymar carrossel"
                   class="image-carrossel"
                   data-video="video2"
                 />
@@ -361,7 +366,7 @@
               <div class="item current-item">
                 <img
                   src="./assets/images/everton-carrossel.png"
-                  alt=""
+                  alt="éverton carrossel"
                   class="image-carrossel"
                   data-video="video3"
                 />
@@ -381,7 +386,7 @@
               <div class="item current-item">
                 <img
                   src="./assets/images/richarlison-carrossel.png"
-                  alt=""
+                  alt="richarlison carrossel"
                   class="image-carrossel"
                   data-video="video4"
                 />
@@ -401,7 +406,7 @@
               <div class="item current-item">
                 <img
                   src="./assets/images/alexandro-quase-gol.png"
-                  alt=""
+                  alt="alexandro carrossel"
                   class="image-carrossel"
                   data-video="video5"
                 />
@@ -424,7 +429,7 @@
               <div class="item current-item">
                 <img
                   src="./assets/images/alex-carrossel.png"
-                  alt=""
+                  alt="alex carrossel"
                   class="image-carrossel"
                   data-video="video6"
                 />
@@ -445,16 +450,143 @@
                 </button>
               </div>
             </div>
+            <button class="prev-button control">
+              <img
+                src="./assets/svgs/arrow-left.svg"
+                alt="arrow left"
+                class="arrows"
+              />
+            </button>
+            <button class="next-button control">
+              <img
+                src="./assets/svgs/arrow-right.svg"
+                alt="arrow right"
+                class="arrows"
+              />
+            </button>
           </div>
         </article>
       </section>
+      <!--Section Patrocionios -->
+      <section id="sectionPatrocinio">
+        <h1 class="title-patrocinio">Patrocinadores da CBF</h1>
+        <article class="container-logos">
+          <div class="logos-1">
+            <img src="./assets/svgs/Nike logo.svg" alt="Logo Nike" />
+            <img
+              src="./assets/svgs/guarana-antarctica-logo.svg"
+              alt="Logo Guaraná antarctica"
+            />
+            <img src="./assets/svgs/vivo.svg" alt="Logo Vivo" />
+            <img src="./assets/svgs/itau.svg" alt="Logo Itaú" />
+            <img src="./assets/svgs/neoenergia.svg" alt="Logo NeoEnergia" />
+          </div>
+          <hr />
+          <div class="logos-2">
+            <img src="./assets/svgs/mastercard.svg" alt="Logo MasterCard" />
+            <img src="./assets/svgs/gol.svg" alt="Logo Gol" />
+            <img src="./assets/svgs/kwai.svg" alt="Logo Kwai" />
+            <img src="./assets/svgs/kavak.svg" alt="Logo Kavak" />
+            <div class="container-logo-2">
+              <img src="./assets/svgs/cimed.svg" alt="Logo Cimed" />
+              <img src="./assets/svgs/paguemenos.svg" alt="Logo Pague Menos" />
+              <img src="./assets/svgs/semptcl.svg" alt="Logo Semp TCL" />
+              <img src="./assets/svgs/zedelivery.svg" alt="Logo Zé Delivery" />
+            </div>
+          </div>
+          <hr />
+          <div class="logos-3">
+            <img src="./assets/svgs/technogym.svg" alt="Logo TechnoGym" />
+            <img src="./assets/svgs/statsports.svg" alt="Logo Stat Sports" />
+            <img src="./assets/svgs/kin.svg" alt="Logo Kin Analytics" />
+            <img
+              src="./assets/svgs/globus.svg"
+              alt="Logo Globus Italian Excellence"
+            />
+          </div>
+        </article>
+      </section>
+      <!--Section Patrocionios -->
     </main>
     <!-- Conteúdo principal -->
     <!-- Links externos -->
     <footer>
-      <nav class="navFooter">
-        <ul class="navListSportsBrasil"></ul>
-      </nav>
+      <section id="newsletter">
+        <span
+          >Quer ficar por dentro da nossa newsletter?
+          <br />
+          Mande seu E-mail e fique ligado.
+        </span>
+        <div class="container-input">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="ex: carlosbruno@gmail.com"
+          />
+          <button name="button-email" id="buttonEmail">ASSINAR</button>
+        </div>
+      </section>
+      <section id="footer-navigation">
+        <a href="index.html"
+          ><img
+            src="./assets/svgs/logo.svg"
+            alt="Logo do Brasil"
+            class="logo-footer"
+        /></a>
+        <nav>
+          <div>
+            <div></div>
+            <h1>A CBF</h1>
+            <ul>
+              <li><a href="./pages/sobre/sobre.html">Sobre a CBF</a></li>
+              <li>Arbitragem</li>
+              <li>Pelos Estados</li>
+              <li>CNRD</li>
+            </ul>
+          </div>
+          <div>
+            <h1>
+              SELEÇÃO
+              <br />
+              BRASILEIRA
+            </h1>
+            <ul>
+              <li><a href="./pages/noticia/noticia.html">Notícias</a></li>
+              <li>Torcedor</li>
+              <li>Jogos</li>
+            </ul>
+          </div>
+          <div>
+            <h1>CBF TV</h1>
+            <p>Últimos Vídeos</p>
+          </div>
+          <div>
+            <h1>NOTÍCIAS</h1>
+            <a href="./pages/noticia/noticia.html">Últimas notícias</a>
+          </div>
+        </nav>
+      </section>
+      <section id="enderecoCBF">
+        <div class="container-endereco">
+          <p>
+            Confederação Brasileira de Futebol
+            <span class="p-endereco">CNPJ</span>: 24.745.815/0002-88
+          </p>
+          <p>
+            <span class="p-endereco">Endereço</span>: Avenida Roberto Caminho
+            Silva 130 - Barão Geral - São Paulo/SP
+          </p>
+          <p>
+            <span class="p-endereco">CEP</span>: 66548-254
+            <span class="p-endereco">Telefone</span>:(45) 3452-1238
+          </p>
+          <p>Termos de Uso | Política de Privacidade | Política de Cookies</p>
+        </div>
+        <div>
+          <h4>FEITO POR: <span class="nomeGrupo">Devs States</span></h4>
+        </div>
+      </section>
     </footer>
     <!-- Links externos -->
     <script src="index.js"></script>

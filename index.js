@@ -56,7 +56,10 @@ const items = document.querySelectorAll(".item")
 const maxItems = items.length
 
 controls.forEach((control) => {
-  control.addEventListener("click", () => {
+  control.addEventListener("click", (event) => {
+    event.preventDefault()
+    event.stopPropagation()
+
     const isLeft = control.classList.contains("prev-button")
 
     if (isLeft) {
@@ -75,8 +78,10 @@ controls.forEach((control) => {
     items.forEach((item) => item.classList.remove("current-item"))
     items[currentItem].scrollIntoView({
       inline: "center",
+      block: "nearest",
       behavior: "smooth",
     })
+    items.forEach((item) => item.classList.remove("current-item"))
     items[currentItem].classList.add("current-item")
   })
 })
@@ -84,7 +89,7 @@ controls.forEach((control) => {
 function openPopup(videoID) {
   const popup = document.getElementById(videoID)
   popup.style.display = "block"
-  popup.style.zIndex = "4"
+
   popup.classList.remove("item", "current-item")
   setTimeout(() => {
     popup.style.opacity = "1"
