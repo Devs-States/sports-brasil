@@ -15,3 +15,4 @@ function toggleMenu(event) {
 
 buttonMenuMobile.addEventListener("click", toggleMenu)
 buttonMenuMobile.addEventListener("touchstart", toggleMenu)
+
