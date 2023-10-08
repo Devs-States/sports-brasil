@@ -20,198 +20,195 @@
 
 /* Variáveis */
 
-
-
-.navListHeader{
-    display: flex;
-    height: 13vh;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-  }
-  #logo {
-    margin-left: 0.1rem;
-  }
-  #navHeader {
-    width: 25%;
-    display: flex;
-    justify-content: center;
-  }
-  #buttonMenu {
-    display: flex;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    gap: 0.5rem;
-  }
-  #menuHamburguer {
-    width: 20px;
-    border-top: 2px solid;
-    display: block;
-    color: var(--color-dark2);
-  }
-  #menuHamburguer::after,
-  #menuHamburguer::before {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 2px;
-    background: currentColor;
-    margin-top: 5px;
-    transition: 0.3s;
-    position: relative;
-  }
-  #navHeader.active #menuHamburguer {
-    border-top-color: transparent;
-  }
-  #navHeader.active #menuHamburguer::before {
-    transform: rotate(135deg);
-  }
-  #navHeader.active #menuHamburguer::after {
-    transform: rotate(-135deg);
-    top: -7px;
-  }
-
-  .navListHeader a {
-    padding: 1rem 0;
-    margin: 0 1rem;
-    font-size: 0.8rem;
-    font-weight: 100;
-    border-bottom: 2px solid var(--color-blue3);
-  }
-  .navListHeader a:hover {
-    background: var(--color-blue3);
-    color: var(--color-dark2);
-  }
-  .navListHeader {
-    background: var(--color-white);
-    width: 100%;
-    top: 4.4rem;
-    right: 0px;
-    height: 0px;
-    position: absolute;
-    z-index: 9999;
-    transition: 0.6s;
-    display: block;
-    visibility: hidden;
-    overflow-y: hidden;
-  }
-  #navHeader.active .navListHeader {
-    height: 40vh;
-    visibility: visible;
-  }
-  /* ==> Main */
-
-  .title-principal,
-  .title-jogos,
-  .titleVideos,
-  .title-patrocinio {
-    font-size: 1.4rem;
-    text-align: center;
-  }
-  .container-principal {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  #sectionJogos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  #tabelaJogos {
-    width: 96%;
-  }
-  table {
-    margin: 0 auto;
-    width: 100%;
-    margin-bottom: 3rem;
-  }
-  caption {
-    font-size: 1rem;
-  }
-  th,
-  td {
-    font-size: 0.8rem;
-  }
-  .buttonTabelaJogos {
-    width: 96%;
-  }
-  #sectionVideos {
-    height: 65vh;
-  }
-
-  .item {
-    width: 345px;
-  }
-  #sectionVideos {
-    width: 98%;
-  }
-  .current-item {
-    filter: none;
-  }
-  .current-item img {
-    transform: scale(1.05);
-  }
-  .popup-video {
-    width: 95%;
-  }
-  .container-logos img {
-    width: 4rem;
-  }
-
-  .logos-1,
-  .logos-2 {
-    gap: 4rem;
-  }
-  .container-logo-2 {
-    flex-wrap: wrap;
-  }
-  /*main*/
-  /*footer*/
-  #newsletter {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 1rem;
-  }
-  #newsletter span {
-    font-size: 0.9rem;
-  }
-  .container-input input {
-    width: 16rem;
-    font-size: 0.9rem;
-  }
-  #buttonEmail {
-    padding: 0 1rem;
-    font-size: 0.8rem;
-  }
-  #footer-navigation {
-    padding: 1rem;
-    flex-direction: column;
-
-    font-size: 0.8rem;
-  }
-  #footer-navigation nav {
-    gap: 1rem;
-  }
-  .logo-footer {
-    width: 7.5rem;
-  }
-  #enderecoCBF {
-    height: 40vh;
-    flex-direction: column;
-    padding: 0 0.7rem;
-    justify-content: center;
-    gap: 2rem;
-    align-items: center;
-    font-size: 0.9rem;
-  }
-  /*footer*/
+.navListHeader {
+  display: flex;
+  height: 13vh;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
 }
+#logo {
+  margin-left: 0.1rem;
+}
+#navHeader {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+}
+#buttonMenu {
+  display: flex;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+#menuHamburguer {
+  width: 20px;
+  border-top: 2px solid;
+  display: block;
+  color: var(--color-dark2);
+}
+#menuHamburguer::after,
+#menuHamburguer::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  margin-top: 5px;
+  transition: 0.3s;
+  position: relative;
+}
+#navHeader.active #menuHamburguer {
+  border-top-color: transparent;
+}
+#navHeader.active #menuHamburguer::before {
+  transform: rotate(135deg);
+}
+#navHeader.active #menuHamburguer::after {
+  transform: rotate(-135deg);
+  top: -7px;
+}
+
+.navListHeader a {
+  padding: 1rem 0;
+  margin: 0 1rem;
+  font-size: 0.8rem;
+  font-weight: 100;
+  border-bottom: 2px solid var(--color-blue3);
+}
+.navListHeader a:hover {
+  background: var(--color-blue3);
+  color: var(--color-dark2);
+}
+.navListHeader {
+  background: var(--color-white);
+  width: 100%;
+  top: 4.4rem;
+  right: 0px;
+  height: 0px;
+  position: absolute;
+  z-index: 9999;
+  transition: 0.6s;
+  display: block;
+  visibility: hidden;
+  overflow-y: hidden;
+}
+#navHeader.active .navListHeader {
+  height: 40vh;
+  visibility: visible;
+}
+/* ==> Main */
+
+.title-principal,
+.title-jogos,
+.titleVideos,
+.title-patrocinio {
+  font-size: 1.4rem;
+  text-align: center;
+}
+.container-principal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+#sectionJogos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#tabelaJogos {
+  width: 96%;
+}
+table {
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+caption {
+  font-size: 1rem;
+}
+th,
+td {
+  font-size: 0.8rem;
+}
+.buttonTabelaJogos {
+  width: 96%;
+}
+#sectionVideos {
+  height: 65vh;
+}
+
+.item {
+  width: 345px;
+}
+#sectionVideos {
+  width: 98%;
+}
+.current-item {
+  filter: none;
+}
+.current-item img {
+  transform: scale(1.05);
+}
+.popup-video {
+  width: 95%;
+}
+.container-logos img {
+  width: 4rem;
+}
+
+.logos-1,
+.logos-2 {
+  gap: 4rem;
+}
+.container-logo-2 {
+  flex-wrap: wrap;
+}
+/*main*/
+/*footer*/
+#newsletter {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 1rem;
+}
+#newsletter span {
+  font-size: 0.9rem;
+}
+.container-input input {
+  width: 16rem;
+  font-size: 0.9rem;
+}
+#buttonEmail {
+  padding: 0 1rem;
+  font-size: 0.8rem;
+}
+#footer-navigation {
+  padding: 1rem;
+  flex-direction: column;
+
+  font-size: 0.8rem;
+}
+#footer-navigation nav {
+  gap: 1rem;
+}
+.logo-footer {
+  width: 7.5rem;
+}
+#enderecoCBF {
+  height: 40vh;
+  flex-direction: column;
+  padding: 0 0.7rem;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  font-size: 0.9rem;
+}
+/*footer*/
