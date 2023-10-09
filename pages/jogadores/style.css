@@ -268,7 +268,7 @@ body {
 @media (min-width: 768px) and (max-width: 991px) {}
 
 /* Media Mobile */
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .header {
     display: flex;
     height: 13vh;
