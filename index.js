@@ -47,3 +47,71 @@ function visibleTable(e) {
   )
 }
 // overflowTabela //
+
+// video carrossel / popup //
+
+const controls = document.querySelectorAll(".control")
+let currentItem = 0
+const items = document.querySelectorAll(".item")
+const maxItems = items.length
+
+controls.forEach((control) => {
+  control.addEventListener("click", (event) => {
+    event.preventDefault()
+    event.stopPropagation()
+
+    const isLeft = control.classList.contains("prev-button")
+
+    if (isLeft) {
+      currentItem -= 1
+    } else {
+      currentItem += 1
+    }
+
+    if (currentItem >= maxItems) {
+      currentItem = 0
+    }
+    if (currentItem < 0) {
+      currentItem = maxItems - 1
+    }
+
+    items.forEach((item) => item.classList.remove("current-item"))
+    items[currentItem].scrollIntoView({
+      inline: "center",
+      block: "nearest",
+      behavior: "smooth",
+    })
+    items.forEach((item) => item.classList.remove("current-item"))
+    items[currentItem].classList.add("current-item")
+  })
+})
+
+function openPopup(videoID) {
+  const popup = document.getElementById(videoID)
+  popup.style.display = "block"
+
+  popup.classList.remove("item", "current-item")
+  setTimeout(() => {
+    popup.style.opacity = "1"
+  }, 200)
+}
+function closeVideoPopup(videoID) {
+  const popup = document.getElementById(videoID)
+  popup.style.opacity = "0"
+
+  setTimeout(() => {
+    popup.style.display = "none"
+  }, 300)
+}
+
+const images = document.querySelectorAll(".image-carrossel")
+
+images.forEach((image) => {
+  image.addEventListener("click", () => {
+    const videoID = image.dataset.video
+
+    openPopup(videoID)
+  })
+})
+
+// video popup //
