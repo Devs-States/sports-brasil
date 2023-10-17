@@ -25,22 +25,15 @@
   --color-dark: #000000;
   --color-dark2: #141414;
   --color-dark3: #1414146b;
-  --color-dark4: #0e0d0db0;
   --color-white: #ffffff;
-  --color-green: #26e037;
-  --color-green2: rgba(38, 224, 54, 0.678);
+
   --color-green3: rgb(21, 190, 35);
-  --color-yellow: #fffc22;
   --color-blue: #2636e0;
   --color-blue2: #36f1f7;
   --color-blue3: #36f1f77c;
   --color-blue4: #091596;
   --color-blue5: #070f66;
   --color-gray: rgb(136, 135, 135);
-  --border-table: #ddd;
-  --background-thead: #d4d4d4;
-  --bg-hoverThead: rgb(221, 220, 220);
-  --background-table: #e7e7e7;
 }
 
 body {
@@ -67,7 +60,7 @@ body {
   margin-left: 4rem;
 }
 .imageLogo {
-  width: 3.8rem;
+  width: 2.8rem;
 }
 #buttonMenu {
   display: none;
@@ -448,7 +441,7 @@ footer {
 }
 
 .logo-footer {
-  width: 9rem;
+  width: 6.5rem;
 }
 #enderecoCBF {
   width: 100%;
@@ -783,7 +776,7 @@ h4 {
     gap: 1rem;
   }
   .logo-footer {
-    width: 7.5rem;
+    width: 5.2rem;
   }
   #enderecoCBF {
     height: 40vh;
