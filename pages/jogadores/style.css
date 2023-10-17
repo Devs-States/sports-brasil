@@ -3,10 +3,23 @@
   src: url("../../assets/fonts/Poppins/Poppins-Medium.ttf");
   font-weight: 200, 300, 600, 800;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("../../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
 }
+
+@font-face{
+  font-family: "Lilita One";
+  src: url("../../assets/fonts/Lilita-One/LilitaOne-Regular.ttf");
+}
+
+@font-face{
+  font-family: "Black Ops One";
+  src: url("../../assets/fonts/Black-Ops-One/BlackOpsOne-Regular.ttf");
+}
+
+
 /* Padrão para todos os elementos */
 * {
   padding: 0;
@@ -14,7 +27,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: Poppins;
+  
 }
 
 /* Variáveis */
@@ -25,9 +38,13 @@
   --color-dark3: #1414146b;
   --color-white: #ffffff;
   --color-green: #26e037;
-  --color-green2: rgba(38, 224, 54, 0.678);
+  --color-green2: #44ff37;
+  --color-greenDk:#011302;
   --color-yellow: #fffc22;
+  --color-yellow2: #9d9a00;
   --color-blue: #2636e0;
+  --color-blue4: #4977ff;
+  --color-blueDk: #131a70;
   --color-blue2: #36f1f7;
   --color-blue3: #36f1f77c;
   --border-table: #ddd;
@@ -39,6 +56,8 @@
 body {
   width: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
+  font-family: Poppins;
 }
 
 /* Media DeskTop */
@@ -52,21 +71,26 @@ body {
   justify-content: space-between;
   padding: 1rem;
   box-shadow: 0 0 1rem var(--color-dark3);
-
+  font-family: Poppins;
   font-weight: 900;
 }
+
 #logo {
   margin-left: 4rem;
 }
+
 .imageLogo {
   width: 3.8rem;
 }
+
 #buttonMenu {
   display: none;
 }
+
 #navHeader {
   width: 65%;
 }
+
 .navListHeader {
   display: flex;
   gap: 6rem;
@@ -78,16 +102,173 @@ body {
   display: block;
   padding: 0.5rem;
 }
+
 .navListHeader a:hover {
   color: var(--color-blue);
 }
+
 /* conteudo principal*/
+
+.carrosselConteiner{
+  margin: 2.5% auto;
+  width: 100%;
+  height: 520px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.center{
+  width: 80%;
+  height: 520px;
+}
+
+.lateral{
+  width: 12%;
+  height: 520px;
+  background: rgb(255, 255, 255);
+  z-index: 3;
+  
+}
+
+.carrosselBox{
+  position: absolute;
+  overflow: hidden;
+  height: 520px;
+  display: flex;
+  padding: 24px 68px;
+  left: 11.2%;
+  gap: 72px;
+  align-items: center;
+  transition: transform .8s ease-in-out;
+  z-index: 1;
+}
+
+.carrosselBg{
+  width: 100%;
+  height: 520px;
+  position: absolute;
+  z-index: -1;
+  background: url('../../assets/images/cbf-bg.jpg') center no-repeat;
+  background-size: cover;
+  filter: brightness(70%);
+}
+
+.card{
+  padding: 4px;
+  animation: sumidao .7s forwards;
+  z-index: 4;
+  flex-grow: 0;
+  flex-basis: 260px;
+  flex-shrink: 0;
+  width: 260px;
+  height: 380px;
+  background:  var(--color-yellow);
+  box-shadow: 0 0 20px black;
+  box-shadow: inset 4px -4px 16px black;
+  display: flex;
+  flex-direction: column;
+  border: solid 10px transparent;
+  border-image: url('../../assets/images/black-bg.jpg') 50 round;
+  transition: .8s ease-in-out;
+  filter: brightness(60%) blur(1px);
+  cursor: pointer;
+}
+
+.cardGrow{
+  transform: scale(1.1);
+  filter: brightness(100%) blur(0);
+  /* transition: .3s ease; */
+}
+
+
+.JogadorImg{
+  width: 96%;
+  height: 54%;
+}
+
+.JogadorImg img{
+  position: relative;
+  margin: 2px 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.JogadorNum{
+  width: 222px;
+  position: absolute;
+  font-family: Black Ops One;
+  color: var(--color-white);
+  text-shadow: 2px 2px 4px black;
+  font-size: 3rem;
+  display: flex;
+  justify-content: right; 
+}
+
+.JogadorNome{
+  position: relative;
+  width: 100%;
+  height: 46%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Lilita One;
+  font-weight: 100;
+  font-size: 1.6rem;
+  /* text-shadow: 2px 2px 4px var(--color-blueDk); */
+  color: var(--color-white);
+  background: url('../../assets/images/spray-black-bg.png') no-repeat center;
+  background-size: cover;
+  
+}
+
+
+.popup {
+  padding-top: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 6;
+ 
+}
+
+.popup-content {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup-opened {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity .8s, transform .8s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 6;
+  filter: brightness(100%) blur(0);
+  
+}
+
+
 /*footer*/
 
 /* Media Tablet */
-@media (min-width: 768px) and (max-width: 991px) {
-} /* Media Mobile */
-@media (max-width: 600px) {
+@media (min-width: 768px) and (max-width: 991px) {}
+
+/* Media Mobile */
+@media screen and (max-width: 600px) {
   .header {
     display: flex;
     height: 13vh;
@@ -95,14 +276,17 @@ body {
     align-items: center;
     position: relative;
   }
+
   #logo {
     margin-left: 0.1rem;
   }
+
   #navHeader {
     width: 25%;
     display: flex;
     justify-content: center;
   }
+
   #buttonMenu {
     display: flex;
     padding: 0.5rem 1rem;
@@ -112,12 +296,14 @@ body {
     cursor: pointer;
     gap: 0.5rem;
   }
+
   #menuHamburguer {
     width: 20px;
     border-top: 2px solid;
     display: block;
     color: var(--color-dark2);
   }
+
   #menuHamburguer::after,
   #menuHamburguer::before {
     content: "";
@@ -129,12 +315,15 @@ body {
     transition: 0.3s;
     position: relative;
   }
+
   #navHeader.active #menuHamburguer {
     border-top-color: transparent;
   }
+
   #navHeader.active #menuHamburguer::before {
     transform: rotate(135deg);
   }
+
   #navHeader.active #menuHamburguer::after {
     transform: rotate(-135deg);
     top: -7px;
@@ -147,10 +336,12 @@ body {
     font-weight: 100;
     border-bottom: 2px solid var(--color-blue3);
   }
+
   .navListHeader a:hover {
     background: var(--color-blue3);
     color: var(--color-dark2);
   }
+
   .navListHeader {
     background: var(--color-white);
     width: 100%;
@@ -164,8 +355,14 @@ body {
     visibility: hidden;
     overflow-y: hidden;
   }
+
   #navHeader.active .navListHeader {
     height: 40vh;
     visibility: visible;
   }
+
+  .carrosselBox{
+    margin-left: -70%;
+  }
+
 }
