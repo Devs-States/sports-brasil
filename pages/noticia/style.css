@@ -52,6 +52,7 @@ body {
   position: fixed;
   font-weight: 900;
   top: 0;
+  z-index: 9999;
 }
 #logo {
   margin-left: 4rem;
@@ -94,7 +95,6 @@ main {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
-  padding: 1rem 0.5rem 0 0.5rem;
 }
 .title-principal {
   margin: 5.5rem 0 1rem 0;
@@ -102,52 +102,85 @@ main {
   font-size: 1.6rem;
   color: var(--color-blue);
 }
-
-#noticia-vinijr {
-  grid-column: 1 / span 2;
-  height: 300px;
-
+#noticia-vinijr,
+#noticia-neymar,
+#noticia-fernandodiniz,
+#noticia-olimpiada {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  padding: 0 0.5rem;
+}
+#noticia-vinijr {
+  grid-column: 1 / span 2;
 }
 .container-image {
   width: 100%;
   height: auto;
   overflow: hidden;
 }
-.image-vinijr {
+.container-image-neymar {
+  width: 82%;
+  height: auto;
+  overflow: hidden;
+}
+.container-image-diniz {
+  width: 82%;
+  height: auto;
+  overflow: hidden;
+}
+.container-image-time {
+  width: 58%;
+  height: auto;
+  overflow: hidden;
+}
+.image-vinijr,
+.image-neymar,
+.image-diniz,
+.image-time {
   border-radius: 0.2rem;
   height: auto;
   transition: all 1s;
 }
-.image-vinijr:hover {
+.image-time {
+  width: 95%;
+  height: 100%;
+}
+.image-vinijr:hover,
+.image-neymar:hover,
+.image-diniz:hover,
+.image-time:hover {
   transform: scale(1.02);
   filter: brightness(85%);
   cursor: pointer;
 }
-#noticia-vinijr section p {
+.subtitle {
   margin-top: 0.5rem;
   color: var(--color-dark2);
 }
-#noticia-vinijr section h2 {
+.title-segundario {
   font-family: Montserrat;
   margin-top: 0.5rem;
   font-weight: 800;
   font-size: 1.2rem;
 }
-.resume-vinijr {
+.resume-vinijr,
+.resume-neymar,
+.resume-diniz {
   text-align: justify;
 }
-#noticia-vinijr .caption-vinijr {
+.caption-vinijr,
+.caption-neymar,
+.caption-diniz {
   margin-top: 1rem;
   font-size: 0.8rem;
 }
-#noticia-vinijr .caption-vinijr:hover {
+.caption-vinijr:hover,
+.caption-neymar:hover,
+.caption-diniz:hover {
   cursor: pointer;
   color: var(--color-blue);
 }
-.container-btn-vinijr {
+.container-btn {
   width: 100%;
   display: flex;
   justify-content: end;
@@ -155,39 +188,35 @@ main {
   padding-right: 3rem;
   margin-top: 1.5rem;
 }
-#noticia-vinijr #timer-noticia {
+.timer-noticia {
   margin-top: 1rem;
   font-size: 0.8rem;
 }
-.btn-vinijr {
+.btn-ver-mais {
   border: none;
   background: transparent;
   cursor: pointer;
   font-size: 0.9rem;
 }
-.btn-vinijr a:hover {
+.btn-ver-mais a:hover {
   background: var(--color-gray2);
   border-radius: 0.2rem;
   color: var(--color-dark2);
 }
-.btn-vinijr a {
+.btn-ver-mais a {
   padding: 0.3rem 2.4rem;
 }
 
 #noticia-neymar {
   grid-column: 1 / span 2;
-  height: 300px;
-  background: blue;
 }
 #noticia-fernandodiniz {
   grid-column: 1 / span 2;
   height: 300px;
-  background-color: yellow;
 }
 #noticia-olimpiada {
   grid-column: 1 / span 2;
   height: 300px;
-  background-color: green;
 }
 /* conteudo principal*/
 /*footer*/
