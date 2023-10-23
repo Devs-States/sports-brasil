@@ -27,6 +27,7 @@
 
   --color-green3: rgb(21, 190, 35);
   --color-blue: #2636e0;
+
   --color-blue4: #091596;
   --color-blue5: #070f66;
   --color-gray: rgb(136, 135, 135);
@@ -124,14 +125,15 @@ main {
   overflow: hidden;
 }
 .container-image-diniz {
-  width: 82%;
+  width: 60%;
   height: auto;
   overflow: hidden;
 }
 .container-image-time {
-  width: 58%;
+  width: 82%;
   height: auto;
   overflow: hidden;
+  margin-right: 0.5rem;
 }
 .image-vinijr,
 .image-neymar,
@@ -165,18 +167,21 @@ main {
 }
 .resume-vinijr,
 .resume-neymar,
-.resume-diniz {
+.resume-diniz,
+.resume-time {
   text-align: justify;
 }
 .caption-vinijr,
 .caption-neymar,
-.caption-diniz {
+.caption-diniz,
+.caption-time {
   margin-top: 1rem;
   font-size: 0.8rem;
 }
 .caption-vinijr:hover,
 .caption-neymar:hover,
-.caption-diniz:hover {
+.caption-diniz:hover,
+.caption-time:hover {
   cursor: pointer;
   color: var(--color-blue);
 }
@@ -406,6 +411,51 @@ h4 {
     height: 40vh;
     visibility: visible;
   }
+  /*noticia*/
+  #noticia-vinijr,
+  #noticia-neymar,
+  #noticia-fernandodiniz,
+  #noticia-olimpiada {
+    flex-direction: column;
+    gap: 1rem;
+    width: 98%;
+  }
+  .container-image-diniz,
+  .container-image-neymar,
+  .container-image-time {
+    width: 100%;
+    overflow: visible;
+  }
+  .image-neymar {
+    width: 100%;
+  }
+  .title-segundario {
+    font-size: 1rem;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  .resume-diniz,
+  .resume-neymar,
+  .resume-time,
+  .resume-vinijr {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+  .container-btn {
+    width: 100%;
+    padding: 1rem;
+  }
+  .btn-ver-mais {
+    width: 100%;
+    border-radius: 0.2rem;
+    background: var(--color-blue);
+    padding: 0.4rem 0;
+  }
+  .btn-ver-mais a {
+    color: var(--color-white);
+  }
+  /*noticia*/
   /*footer*/
   footer {
     width: 100%;
