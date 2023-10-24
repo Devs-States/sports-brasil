@@ -24,14 +24,19 @@
   --color-dark2: #141414;
   --color-dark3: #1414146b;
   --color-white: #ffffff;
-
+  --color-green3: rgb(21, 190, 35);
   --color-blue: #2636e0;
+  --color-blue4: #091596;
+  --color-blue5: #070f66;
+  --color-gray: rgb(136, 135, 135);
+  --color-gray2: rgb(233, 233, 233);
 }
 
 body {
   width: 100%;
   min-height: 100vh;
 }
+/*header*/
 .header {
   background: var(--color-white);
   width: 100%;
@@ -72,6 +77,189 @@ body {
 .navListHeader a:hover {
   color: var(--color-blue);
 }
+/*header*/
+/*main*/
+main {
+  min-width: 280px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+#noticia-principal {
+  margin-top: 5.5rem;
+  width: 100%;
+}
+.container-image-noticia {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container-image-noticia section {
+  width: 70%;
+}
+.title-principal,
+.title-segundario {
+  font-family: Montserrat;
+  margin-bottom: 1rem;
+  color: var(--color-blue);
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+.caption {
+  font-size: 0.9rem;
+}
+.resume {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1rem 0;
+}
+.container-noticia {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-image {
+  width: 70%;
+  background-color: var(--color-gray2);
+  border-radius: 0.2rem;
+}
+.image {
+  width: 100%;
+  border-radius: 0.2rem;
+}
+.container-text-image {
+  padding: 0.5rem;
+}
+#container-text-noticia {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  margin: 1.5rem 0 2rem 0;
+}
+#container-text-noticia section {
+  width: 70%;
+}
+#noticias-relacionadas {
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-title-segundario {
+  width: 70%;
+}
+.container-noticias-relacionadas nav {
+  width: 70%;
+  overflow: hidden;
+}
+.container-images-noticias {
+  display: flex;
+}
+/*main*/
+/*footer*/
+footer {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 4rem;
+}
+#newsletter {
+  width: 100%;
+  height: 30vh;
+
+  background-color: var(--color-blue4);
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 9rem;
+  align-items: center;
+}
+#newsletter span {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-family: Montserrat;
+}
+.container-input {
+  display: flex;
+  align-items: center;
+}
+.container-input input {
+  width: 30rem;
+  padding-left: 1rem;
+  height: 3rem;
+
+  border: none;
+  font-size: 1.2rem;
+  color: var(--color-dark2);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.container-input input:focus {
+  outline: none;
+}
+#buttonEmail {
+  padding: 0 2.5rem;
+  height: 3rem;
+
+  color: var(--color-dark4);
+  font-weight: 900;
+  font-size: 1rem;
+  background-color: var(--color-green3);
+  border: none;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  margin-left: -1.04px;
+  cursor: pointer;
+}
+#footer-navigation {
+  height: 50vh;
+  width: 100%;
+
+  background-color: var(--color-blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 9rem;
+}
+#footer-navigation nav {
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  color: var(--color-white);
+  cursor: pointer;
+}
+#footer-navigation nav a {
+  color: var(--color-white);
+}
+#footer-navigation nav a:hover,
+#footer-navigation nav li:hover,
+#footer-navigation nav p:hover {
+  text-decoration: underline;
+}
+
+.logo-footer {
+  width: 6.5rem;
+}
+#enderecoCBF {
+  width: 100%;
+  height: 20vh;
+
+  background-color: var(--color-blue5);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 9rem;
+  color: var(--color-gray);
+  align-items: center;
+}
+.p-endereco,
+.nomeGrupo {
+  color: var(--color-white);
+}
+h4 {
+  font-family: Montserrat;
+}
+/*footer*/
 @media (max-width: 600px) {
   .header {
     display: flex;
@@ -153,4 +341,50 @@ body {
     height: 40vh;
     visibility: visible;
   }
+  /*main*/
+  /*main*/
+  /*footer*/
+  footer {
+    width: 100%;
+    min-height: 100vh;
+  }
+  #newsletter {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  #newsletter span {
+    font-size: 0.9rem;
+  }
+  .container-input input {
+    width: 16rem;
+    font-size: 0.9rem;
+  }
+  #buttonEmail {
+    padding: 0 1rem;
+    font-size: 0.8rem;
+  }
+  #footer-navigation {
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 0.8rem;
+  }
+  #footer-navigation nav {
+    gap: 1rem;
+  }
+  .logo-footer {
+    width: 5.2rem;
+  }
+  #enderecoCBF {
+    height: 40vh;
+    flex-direction: column;
+    padding: 0 0.7rem;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+  /*footer*/
 }
