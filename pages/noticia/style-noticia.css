@@ -98,12 +98,13 @@ main {
   width: 70%;
 }
 .title-principal,
-.title-segundario {
+.title-segundario,
+.title-patrocinio {
   font-family: Montserrat;
   margin-bottom: 1rem;
   color: var(--color-blue);
   font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .caption {
   font-size: 0.9rem;
@@ -142,20 +143,143 @@ main {
 }
 #noticias-relacionadas {
   width: 100%;
-  margin-top: 5rem;
+  margin: 5rem 0 6rem 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 .container-title-segundario {
-  width: 70%;
+  width: 100%;
+  text-align: left;
 }
+
 .container-noticias-relacionadas nav {
-  width: 70%;
-  overflow: hidden;
+  width: 100%;
 }
 .container-images-noticias {
   display: flex;
+  overflow: hidden;
+  height: 305px;
+  gap: 1px;
+  border-radius: 0.2rem;
+}
+.container-images-noticias li {
+  width: 310px;
+  height: auto;
+
+  position: relative;
+}
+.li-neymar::before {
+  content: "Neymar- craque da semana";
+
+  position: absolute;
+  width: 95%;
+
+  bottom: 0px;
+  padding-left: 1rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.767)
+  );
+  font: 800 1.3rem Montserrat;
+  color: var(--color-white);
+  pointer-events: none;
+  z-index: 1;
+}
+.li-fernando::before {
+  content: "Fernando Diniz- Estrategista";
+  position: absolute;
+  width: 95%;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.767)
+  );
+  padding-left: 1rem;
+  bottom: 0;
+  font: 800 1.3rem Montserrat;
+  color: var(--color-white);
+  z-index: 1;
+}
+.li-time::before {
+  content: "Time Pronto- Olimpiadas 2024";
+  position: absolute;
+  width: 95%;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.767)
+  );
+  padding-left: 1rem;
+  bottom: 0;
+  font: 800 1.3rem Montserrat;
+  color: var(--color-white);
+  z-index: 1;
+}
+.li-vinijr::before {
+  content: "Vini Jr - Destaque da";
+  position: absolute;
+  width: 95%;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.767)
+  );
+  padding-left: 1rem;
+  bottom: 0;
+  font: 800 1.3rem Montserrat;
+  color: var(--color-white);
+  z-index: 1;
+}
+.container-images-noticias img {
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  border-radius: 0.2rem;
+}
+.container-images-noticias img:hover {
+  transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: all 0.2s;
+  filter: opacity(90%);
+}
+#sectionPatrocinio {
+  width: 100%;
+  min-height: 100vh;
+}
+.container-logos {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+hr {
+  height: 3.2px;
+  background-color: var(--color-blue);
+}
+.logos-1,
+.logos-3 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.logos-2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+}
+.container-logo-2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 /*main*/
 /*footer*/
@@ -266,7 +390,7 @@ h4 {
     height: 13vh;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: fixed;
   }
   #logo {
     margin-left: 0.1rem;
@@ -341,7 +465,71 @@ h4 {
     height: 40vh;
     visibility: visible;
   }
+
   /*main*/
+  #noticia-principal {
+    margin-top: 8rem;
+  }
+  .container-image-noticia section,
+  .container-noticia section,
+  .container-text-noticia section {
+    width: 94%;
+  }
+  .container-text-noticia {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+  }
+  .container-noticias-relacionadas {
+    width: 98%;
+    display: flex;
+    justify-content: center;
+  }
+  .container-images-noticias {
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+    gap: 1rem;
+  }
+  .li-neymar::before,
+  .li-fernando::before,
+  .li-time::before,
+  .li-vinijr::before {
+    padding-bottom: 0.5rem;
+    bottom: 5px;
+  }
+  .container-images-noticias li {
+    width: 96%;
+  }
+  .container-images-noticias img {
+    width: 100%;
+  }
+  .container-logos {
+    min-height: 100vh;
+  }
+  .container-logos img {
+    width: 5rem;
+  }
+  .logos-1,
+  .logos-2 {
+    margin-bottom: 1rem;
+  }
+  .logos-3,
+  .logos-2 {
+    margin-top: 1rem;
+  }
+  .logos-1,
+  .logos-2,
+  .logos-3,
+  .container-logo-2 {
+    gap: 4rem;
+  }
+  .container-logo-2 {
+    flex-wrap: wrap;
+  }
   /*main*/
   /*footer*/
   footer {
