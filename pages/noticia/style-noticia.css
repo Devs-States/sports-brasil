@@ -1,7 +1,12 @@
 @font-face {
   font-family: "Poppins";
   src: url("../../assets/fonts/Poppins/Poppins-Medium.ttf");
-  font-weight: 100, 200, 300, 600, 800;
+  font-weight: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+}
+@font-face {
+  font-family: "Light-poppins";
+  src: url("../../assets/fonts/Poppins/Poppins-Light.ttf");
+  font-weight: 100;
 }
 @font-face {
   font-family: "Montserrat";
@@ -14,7 +19,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Variáveis */
@@ -25,6 +30,7 @@
   --color-dark3: #1414146b;
   --color-white: #ffffff;
   --color-green3: rgb(21, 190, 35);
+  --color-orange: rgb(150, 150, 9);
   --color-blue: #2636e0;
   --color-blue4: #091596;
   --color-blue5: #070f66;
@@ -131,15 +137,21 @@ main {
 .container-text-image {
   padding: 0.5rem;
 }
-#container-text-noticia {
+.container-text-noticia {
   width: 100%;
   display: flex;
   justify-content: center;
 
   margin: 1.5rem 0 2rem 0;
 }
-#container-text-noticia section {
+.container-text-noticia section {
   width: 70%;
+}
+.text-noticia,
+.container-li-text p,
+.caption {
+  font-family: "Light-poppins", sans-serif;
+  font-weight: lighter;
 }
 #noticias-relacionadas {
   width: 100%;
@@ -158,19 +170,21 @@ main {
 }
 .container-images-noticias {
   display: flex;
-  overflow: hidden;
-  height: 305px;
   gap: 1px;
+}
+
+.container-li-image-neymar,
+.container-li-image-diniz,
+.container-li-image-vini,
+.container-li-image-time {
+  width: 310px;
+  height: 305px;
+  overflow: hidden;
+  position: relative;
   border-radius: 0.2rem;
 }
-.container-images-noticias li {
-  width: 310px;
-  height: auto;
-
-  position: relative;
-}
-.li-neymar::before {
-  content: "Neymar- craque da semana";
+.container-li-image-neymar::before {
+  content: "Neymar-craque da semana";
 
   position: absolute;
   width: 95%;
@@ -187,7 +201,27 @@ main {
   pointer-events: none;
   z-index: 1;
 }
-.li-fernando::before {
+.container-li-text {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 0.2rem;
+  padding: 1rem 1rem 1rem 1rem;
+}
+.btn-li-text {
+  border: none;
+  margin-top: 0.5rem;
+  background: transparent;
+}
+.wiperLink-btn-li-text {
+  padding: 0 1rem 0 1rem;
+  color: var(--color-orange);
+  transition: all 0.2s;
+}
+.wiperLink-btn-li-text:hover {
+  color: var(--color-dark2);
+}
+.container-li-image-diniz::before {
   content: "Fernando Diniz- Estrategista";
   position: absolute;
   width: 95%;
@@ -203,7 +237,7 @@ main {
   color: var(--color-white);
   z-index: 1;
 }
-.li-time::before {
+.container-li-image-time::before {
   content: "Time Pronto- Olimpiadas 2024";
   position: absolute;
   width: 95%;
@@ -219,7 +253,7 @@ main {
   color: var(--color-white);
   z-index: 1;
 }
-.li-vinijr::before {
+.container-li-image-vini::before {
   content: "Vini Jr - Destaque da";
   position: absolute;
   width: 95%;
@@ -475,6 +509,10 @@ h4 {
   .container-text-noticia section {
     width: 94%;
   }
+  .container-image,
+  .container-image img {
+    width: 100%;
+  }
   .container-text-noticia {
     margin-top: 2rem;
     display: flex;
@@ -494,21 +532,29 @@ h4 {
     overflow: visible;
     gap: 1rem;
   }
-  .li-neymar::before,
-  .li-fernando::before,
-  .li-time::before,
-  .li-vinijr::before {
-    padding-bottom: 0.5rem;
-    bottom: 5px;
+  .container-li-image-neymar,
+  .container-li-image-diniz,
+  .container-li-image-vini,
+  .container-li-image-time {
+    width: 100%;
   }
-  .container-images-noticias li {
+  .container-li-image-neymar::before,
+  .container-li-image-diniz::before,
+  .container-li-image-vini::before,
+  .container-li-image-time::before {
+    padding-bottom: 0.5rem;
+  }
+  li {
     width: 96%;
   }
   .container-images-noticias img {
     width: 100%;
   }
+  #noticias-relacionadas {
+    min-height: 220vh;
+  }
   .container-logos {
-    min-height: 100vh;
+    min-height: 150vh;
   }
   .container-logos img {
     width: 5rem;
@@ -529,6 +575,10 @@ h4 {
   }
   .container-logo-2 {
     flex-wrap: wrap;
+  }
+  .title-segundario,
+  .title-patrocinio {
+    padding-left: 0.6rem;
   }
   /*main*/
   /*footer*/
