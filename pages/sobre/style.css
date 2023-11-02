@@ -78,48 +78,124 @@ body {
 }
 /* conteudo principal*/
 
-.card {
-  position: relative;
-  margin: 10px;
+main {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+.container-first {
+  width: 100%;
+  margin-top: 1rem;
+}
+.container-first h1 {
+  font-size: 3rem;
+  font-family: Montserrat;
+  text-align: center;
+}
+.container-img {
+  width: 100%;
+  text-align: center;
+}
+.container-img img {
+  width: 70%;
+}
+.container-historia {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 200px;
-  height: 260px;
-  border-radius: 12px;
-  border: solid 1px black;
-  background: whitesmoke;
-  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.205);
+  gap: 2rem;
+  margin-bottom: 8rem;
 }
-
-.playerPhoto {
+.container-text,
+.container-image-historia {
+  width: 48%;
   text-align: center;
 }
-
-.playerPhoto img {
-  margin-top: 24px;
+.title-segundario {
+  font-family: Montserrat;
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
 }
-
-.playerPhoto p {
-  font-family: "Lilita One", cursive;
+.container-text-historia {
+  width: 80%;
+  margin: 0 auto;
 }
-
-.infobox {
-  width: 198px;
-  height: 65px;
-  background: black;
-  text-align: center;
-  border-radius: 0 0 12px 12px;
-}
-
-.infobox p {
-  padding: 20px 0;
-  color: white;
+.text-container-historia {
   font-size: 1.1rem;
-  font-weight: 500;
 }
-
+.container-image-historia {
+  margin-top: 6rem;
+  overflow: hidden;
+  border-radius: 0.2rem;
+  height: 450px;
+}
+.container-image-historia img {
+  width: 100%;
+  transition: all 0.4s;
+}
+.container-image-historia img:hover {
+  transform: scale(1.02);
+  transition: all 0.4s;
+}
+.title-terceiro {
+  font-family: Montserrat;
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem 0 2rem;
+}
+.container-image {
+  margin: 1rem 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+.image1 {
+  height: 478px;
+  overflow: hidden;
+  margin-left: 0.5rem;
+  grid-row: span 3;
+  width: 850px;
+  border-radius: 0.2rem;
+  position: relative;
+}
+.image2,
+.image3 {
+  border-radius: 0.2rem;
+  width: 580px;
+  height: 232px;
+  overflow: hidden;
+  position: relative;
+}
+.image1 img {
+  border-radius: 0.2rem;
+  transition: all 0.4s;
+}
+.image1::before {
+  content: "Brasileirão, uns dos campeonatos mais espetaculares do brasil, cheio de times fortes e muitas promessas.";
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.56));
+  padding-bottom: 1rem;
+  width: 99.9%;
+  z-index: 1;
+  color: white;
+  font-size: 1.2rem;
+}
+.image2 img,
+.image3 img {
+  transition: all 0.4s;
+  width: 100%;
+}
+.image1 img:hover,
+.image2 img:hover,
+.image3 img:hover {
+  transform: scale(1.02);
+  transition: all 0.4s;
+}
+.resume-historia {
+  margin: 0 0.5rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
 /*footer*/
 footer {
   width: 100%;
