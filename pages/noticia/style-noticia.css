@@ -418,6 +418,137 @@ h4 {
   font-family: Montserrat;
 }
 /*footer*/
+@media (min-width: 600px) and (max-width: 991px) {
+  .header {
+    display: flex;
+    height: 13vh;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+  }
+  #logo {
+    margin-left: 0.1rem;
+  }
+  #navHeader {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+  }
+  #buttonMenu {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  #menuHamburguer {
+    width: 20px;
+    border-top: 2px solid;
+    display: block;
+    color: var(--color-dark2);
+  }
+  #menuHamburguer::after,
+  #menuHamburguer::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #navHeader.active #menuHamburguer {
+    border-top-color: transparent;
+  }
+  #navHeader.active #menuHamburguer::before {
+    transform: rotate(135deg);
+  }
+  #navHeader.active #menuHamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+
+  .navListHeader a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    font-size: 0.8rem;
+    font-weight: 100;
+    border-bottom: 2px solid var(--color-blue3);
+  }
+  .navListHeader a:hover {
+    background: var(--color-blue3);
+    color: var(--color-dark2);
+  }
+  .navListHeader {
+    background: var(--color-white);
+    width: 100%;
+    top: 4.4rem;
+    right: 0px;
+    height: 0px;
+    position: absolute;
+    z-index: 9999;
+    transition: 0.6s;
+    display: block;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  #navHeader.active .navListHeader {
+    height: 40vh;
+    visibility: visible;
+  }
+  .container-images-noticias {
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: visible;
+    gap: 0.5rem;
+  }
+  .container-li-image-neymar,
+  .container-li-image-diniz,
+  .container-li-image-vini,
+  .container-li-image-time {
+    width: 100%;
+  }
+  .container-li-image-neymar::before,
+  .container-li-image-diniz::before,
+  .container-li-image-vini::before,
+  .container-li-image-time::before {
+    padding-bottom: 0.5rem;
+  }
+  li {
+    width: 49%;
+  }
+  .container-images-noticias img {
+    width: 100%;
+  }
+  .container-logos {
+    min-height: 150vh;
+  }
+  .container-logos img {
+    width: 7rem;
+  }
+  .logos-1,
+  .logos-2 {
+    margin-bottom: 1rem;
+  }
+  .logos-3,
+  .logos-2 {
+    margin-top: 1rem;
+  }
+  .logos-1,
+  .logos-2,
+  .logos-3,
+  .container-logo-2 {
+    gap: 4rem;
+  }
+  .container-logo-2 {
+    flex-wrap: wrap;
+  }
+}
 @media (max-width: 600px) {
   .header {
     display: flex;

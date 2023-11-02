@@ -24,7 +24,7 @@
   --color-dark2: #141414;
   --color-dark3: #1414146b;
   --color-white: #ffffff;
-
+  --color-orange: rgb(150, 150, 9);
   --color-green3: rgb(21, 190, 35);
   --color-blue: #2636e0;
 
@@ -110,6 +110,7 @@ main {
   display: flex;
   align-items: center;
   padding: 0 0.5rem;
+  gap: 1rem;
 }
 #noticia-vinijr {
   grid-column: 1 / span 2;
@@ -142,6 +143,7 @@ main {
   border-radius: 0.2rem;
   height: auto;
   transition: all 1s;
+  width: 100%;
 }
 .image-time {
   width: 95%;
@@ -170,6 +172,13 @@ main {
 .resume-diniz,
 .resume-time {
   text-align: justify;
+  color: var(--color-dark2);
+}
+.resume-vinijr:hover,
+.resume-neymar:hover,
+.resume-diniz:hover,
+.resume-time:hover {
+  color: var(--color-blue);
 }
 .caption-vinijr,
 .caption-neymar,
@@ -204,11 +213,13 @@ main {
   font-size: 0.9rem;
 }
 .btn-ver-mais a:hover {
-  background: var(--color-gray2);
+  transition: all 0.4s;
   border-radius: 0.2rem;
   color: var(--color-dark2);
 }
 .btn-ver-mais a {
+  transition: all 0.4s;
+  color: var(--color-orange);
   padding: 0.3rem 2.4rem;
 }
 
@@ -329,8 +340,88 @@ h4 {
 
 /* Media Tablet */
 @media (min-width: 768px) and (max-width: 991px) {
+  .header {
+    display: flex;
+    height: 13vh;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  #logo {
+    margin-left: 0.1rem;
+  }
+  #navHeader {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+  }
+  #buttonMenu {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  #menuHamburguer {
+    width: 20px;
+    border-top: 2px solid;
+    display: block;
+    color: var(--color-dark2);
+  }
+  #menuHamburguer::after,
+  #menuHamburguer::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #navHeader.active #menuHamburguer {
+    border-top-color: transparent;
+  }
+  #navHeader.active #menuHamburguer::before {
+    transform: rotate(135deg);
+  }
+  #navHeader.active #menuHamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+
+  .navListHeader a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    font-size: 0.8rem;
+    font-weight: 100;
+    border-bottom: 2px solid var(--color-blue3);
+  }
+  .navListHeader a:hover {
+    background: var(--color-blue3);
+    color: var(--color-dark2);
+  }
+  .navListHeader {
+    background: var(--color-white);
+    width: 100%;
+    top: 4.4rem;
+    right: 0px;
+    height: 0px;
+    position: absolute;
+    z-index: 9999;
+    transition: 0.6s;
+    display: block;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  #navHeader.active .navListHeader {
+    height: 40vh;
+    visibility: visible;
+  }
 } /* Media Mobile */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .header {
     display: flex;
     height: 13vh;
