@@ -16,3 +16,14 @@ function toggleMenu(event) {
 buttonMenuMobile.addEventListener("click", toggleMenu)
 buttonMenuMobile.addEventListener("touchstart", toggleMenu)
 
+// animação
+
+const intersectObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry)
+    entry.target.classList.toggle("show", entry.isIntersecting)
+  })
+})
+
+const elements = document.querySelectorAll(".animate")
+elements.forEach((el) => intersectObserver.observe(el))

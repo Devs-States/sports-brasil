@@ -353,6 +353,139 @@ h4 {
 
 /* Media Tablet */
 @media (min-width: 768px) and (max-width: 991px) {
+  .header {
+    display: flex;
+    height: 13vh;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  #logo {
+    margin-left: 0.1rem;
+  }
+
+  #navHeader {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #buttonMenu {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #menuHamburguer {
+    width: 20px;
+    border-top: 2px solid;
+    display: block;
+    color: var(--color-dark2);
+  }
+
+  #menuHamburguer::after,
+  #menuHamburguer::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  #navHeader.active #menuHamburguer {
+    border-top-color: transparent;
+  }
+
+  #navHeader.active #menuHamburguer::before {
+    transform: rotate(135deg);
+  }
+
+  #navHeader.active #menuHamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+
+  .navListHeader a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    font-size: 0.8rem;
+    font-weight: 100;
+    border-bottom: 2px solid var(--color-blue3);
+  }
+
+  .navListHeader a:hover {
+    background: var(--color-blue3);
+    color: var(--color-dark2);
+  }
+
+  .navListHeader {
+    background: var(--color-white);
+    width: 100%;
+    top: 4.4rem;
+    right: 0px;
+    height: 0px;
+    position: absolute;
+    z-index: 9999;
+    transition: 0.6s;
+    display: block;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  #navHeader.active .navListHeader {
+    height: 40vh;
+    visibility: visible;
+  }
+  footer {
+    width: 100%;
+    min-height: 100vh;
+  }
+  #newsletter {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  #newsletter span {
+    font-size: 1.2rem;
+  }
+  .container-input input {
+    width: 24rem;
+    font-size: 0.9rem;
+  }
+  #buttonEmail {
+    padding: 0 1rem;
+    font-size: 0.8rem;
+  }
+  #footer-navigation {
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 0.8rem;
+  }
+  #footer-navigation nav {
+    gap: 1rem;
+  }
+  .logo-footer {
+    width: 5.2rem;
+  }
+  #enderecoCBF {
+    height: 40vh;
+    flex-direction: column;
+    padding: 0 0.7rem;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    font-size: 0.9rem;
+  }
 }
 
 /* Media Mobile */

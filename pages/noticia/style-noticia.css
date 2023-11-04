@@ -548,6 +548,48 @@ h4 {
   .container-logo-2 {
     flex-wrap: wrap;
   }
+  footer {
+    width: 100%;
+    min-height: 100vh;
+  }
+  #newsletter {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  #newsletter span {
+    font-size: 1.2rem;
+  }
+  .container-input input {
+    width: 24rem;
+    font-size: 0.9rem;
+  }
+  #buttonEmail {
+    padding: 0 1rem;
+    font-size: 0.8rem;
+  }
+  #footer-navigation {
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 0.8rem;
+  }
+  #footer-navigation nav {
+    gap: 1rem;
+  }
+  .logo-footer {
+    width: 5.2rem;
+  }
+  #enderecoCBF {
+    height: 40vh;
+    flex-direction: column;
+    padding: 0 0.7rem;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    font-size: 0.9rem;
+  }
 }
 @media (max-width: 600px) {
   .header {
