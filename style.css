@@ -236,7 +236,7 @@ tr:hover {
 }
 .gallery {
   display: flex;
-  flex-flow: row no-wrap;
+
   gap: 2rem;
 }
 .prev-button {
@@ -465,7 +465,7 @@ h4 {
 
 /* Media Tablet*/
 
-/* @media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 601px) and (max-width: 990px) {
   .header {
     display: flex;
     height: 13vh;
@@ -548,19 +548,117 @@ h4 {
   }
 
   /*main*/
-
-/* .container-principal {
+  .container-principal {
+    width: 90%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
-
-  .container-diniz {
-    width: 98%;
-  }
-  .container-diniz img {
+  .container-vini,
+  .container-vini img,
+  .container-diniz,
+  .container-diniz img,
+  .container-neymar,
+  .container-neymar img {
     width: 100%;
   }
-} */
+  #sectionJogos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  #tabelaJogos {
+    width: 96%;
+  }
+  .buttonTabelaJogos {
+    width: 96%;
+  }
+  .item {
+    width: 345px;
+  }
+  #sectionVideos {
+    width: 98%;
+    height: 65vh;
+  }
+  .current-item {
+    filter: none;
+  }
+  .current-item img {
+    transform: scale(1.05);
+  }
+
+  .popup-video {
+    width: 95%;
+  }
+  .container-logos {
+    min-height: 100vh;
+  }
+  .container-logos img {
+    width: 5rem;
+  }
+  .logos-1,
+  .logos-2 {
+    margin-bottom: 1rem;
+  }
+  .logos-3,
+  .logos-2 {
+    margin-top: 1rem;
+  }
+  .logos-1,
+  .logos-2,
+  .logos-3,
+  .container-logo-2 {
+    gap: 4rem;
+  }
+  .container-logo-2 {
+    flex-wrap: wrap;
+  }
+  /*footer*/
+  footer {
+    width: 100%;
+    min-height: 100vh;
+  }
+  #newsletter {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  #newsletter span {
+    font-size: 1.2rem;
+  }
+  .container-input input {
+    width: 24rem;
+    font-size: 0.9rem;
+  }
+  #buttonEmail {
+    padding: 0 1rem;
+    font-size: 0.8rem;
+  }
+  #footer-navigation {
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 0.8rem;
+  }
+  #footer-navigation nav {
+    gap: 1rem;
+  }
+  .logo-footer {
+    width: 5.2rem;
+  }
+  #enderecoCBF {
+    height: 40vh;
+    flex-direction: column;
+    padding: 0 0.7rem;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+  /*footer*/
+}
 
 /* Media Mobile*/
 @media (max-width: 600px) {
@@ -700,15 +798,13 @@ h4 {
   .buttonTabelaJogos {
     width: 96%;
   }
-  #sectionVideos {
-    height: 65vh;
-  }
 
   .item {
     width: 345px;
   }
   #sectionVideos {
     width: 98%;
+    height: 65vh;
   }
   .current-item {
     filter: none;
@@ -721,7 +817,7 @@ h4 {
     width: 95%;
   }
   .container-logos {
-    min-height: 100vh;
+    min-height: 150vh;
   }
   .container-logos img {
     width: 5rem;

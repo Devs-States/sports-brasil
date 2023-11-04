@@ -91,6 +91,7 @@ main {
 }
 #noticias {
   width: 100%;
+
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -145,10 +146,7 @@ main {
   transition: all 1s;
   width: 100%;
 }
-.image-time {
-  width: 95%;
-  height: 100%;
-}
+
 .image-vinijr:hover,
 .image-neymar:hover,
 .image-diniz:hover,
@@ -228,11 +226,9 @@ main {
 }
 #noticia-fernandodiniz {
   grid-column: 1 / span 2;
-  height: 300px;
 }
 #noticia-olimpiada {
   grid-column: 1 / span 2;
-  height: 300px;
 }
 /* conteudo principal*/
 /*footer*/
@@ -420,6 +416,48 @@ h4 {
     height: 40vh;
     visibility: visible;
   }
+  footer {
+    width: 100%;
+    min-height: 100vh;
+  }
+  #newsletter {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  #newsletter span {
+    font-size: 1.2rem;
+  }
+  .container-input input {
+    width: 24rem;
+    font-size: 0.9rem;
+  }
+  #buttonEmail {
+    padding: 0 1rem;
+    font-size: 0.8rem;
+  }
+  #footer-navigation {
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 0.8rem;
+  }
+  #footer-navigation nav {
+    gap: 1rem;
+  }
+  .logo-footer {
+    width: 5.2rem;
+  }
+  #enderecoCBF {
+    height: 40vh;
+    flex-direction: column;
+    padding: 0 0.7rem;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    font-size: 0.9rem;
+  }
 } /* Media Mobile */
 @media (max-width: 768px) {
   .header {
@@ -503,6 +541,9 @@ h4 {
     visibility: visible;
   }
   /*noticia*/
+  #noticias {
+    min-height: 100vh;
+  }
   #noticia-vinijr,
   #noticia-neymar,
   #noticia-fernandodiniz,
